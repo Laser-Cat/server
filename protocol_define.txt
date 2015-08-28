@@ -1,0 +1,10 @@
+## protocol define:
+server                                                                          clinet
+                                                                                    GET_PORT_NUMBER
+new_session_port_number
+                                                                                    confirm_new_session_port_number
+ack(on equ)/net_session_port_number(not equ)
+                                                                                    BYE(on ack)GET_PORT_NUMBER(else)
+BYE(on ack)
+close connection                                                          close connection
+                                                                                    connect to new_session_port_number
